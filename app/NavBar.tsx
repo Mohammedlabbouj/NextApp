@@ -6,7 +6,6 @@ import { AiFillBank } from "react-icons/ai";
 import classnames from "classnames";
 const NavBar = () => {
   const Path = usePathname();
-  console.log(Path);
   const links = [
     { label: "DaechBored", href: "/" },
     { label: "Issues", href: "/Issues" },
@@ -24,9 +23,9 @@ const NavBar = () => {
             key={link.href}
             href={link.href}
             className={classnames({
-              "text-red-50": Path === link.href,
+              "text-black": Path === link.href,
               "text-zinc-500": Path !== link.href,
-              "hover:text-white transition-colors": true,
+              "hover:text-black transition-colors": true,
             })}
           >
             {link.label}
